@@ -9,6 +9,8 @@ black = "==19.3b0"
 [packages]
 django = "*"
 dynaconf = {extras = ["yaml"],version = "*"}
+dj-database-url = "*"
+psycopg = "*"
 
 [requires]
 python_version = "3.7"
