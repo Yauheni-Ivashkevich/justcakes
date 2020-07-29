@@ -25,7 +25,7 @@ SECRET_KEY = 'f-*^44+htjxz(qxbe=)&)=@tg5$0fr3-m+l$%&lnakz3u_fwxj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "justcakes.herokuapp.com"]
 
 
 # Application definition
