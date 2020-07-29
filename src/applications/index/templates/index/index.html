@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Justcakes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+   body {
+    background-image: url({% static "range/fone2.jpg"%}); /* Путь к фоновому изображению */
+    background-color: #c7b39b; /* Цвет фона */
+   }
+  </style>
+</head>
+<body>
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Miss Ryzh-justcakes!!!</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+         <a class="p-2 text-dark" href="#">Главная</a>
+            <a class="p-2 text-dark" href="#">Ассортимент</a>
+            <a class="p-2 text-dark" href="#">Доставка и оплата</a>
+            <a class="p-2 text-dark" href="#">Контакты</a>
+        </nav>
+        <a class="btn btn-outline-primary" href="#">Sign up</a>
+        </div>
+    <center>
+    <h1>Sweets from Mis Ryth - выпечка с душой.><br>
+    Большой ассортимент тортов, пряников, <br>
+    капкейков и других сладостей на ваш вкус.<br>
+    </h1>
+    </center>
+<footer>
+    <p>(C) Mis Ryth 2020</p>
+    <p><a href="mailto:mis_ryzh@gmail.com">email</a></p>
+    <p><a href="https://www.instagram.com/@mis_ryzh">instagram</a></p>
+    <p><a href="https://www.vk.com/mis_ryzh">VK</a></p>
+</footer>
+</body>
+</html>
