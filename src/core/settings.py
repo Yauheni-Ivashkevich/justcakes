@@ -28,7 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # ---applications---
-    # 'applications.index',
+    'applications.index',
     # 'applications.range',
     # 'applications.payment',
     # 'applications.contacts',
@@ -49,7 +49,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [f"{BASE_DIR}/core/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
