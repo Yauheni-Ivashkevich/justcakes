@@ -1,7 +1,4 @@
 import os
-from pathlib import Path
-
-
 
 from dynaconf import settings as _settings
 
