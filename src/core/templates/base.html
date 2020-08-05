@@ -1,17 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+{% load static %}
+<!DOCTYPE HTML>  
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Justcakes :: {% block title %}Justcakes{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="{% static 'images/favicon.jpg' %}" rel="shortcut icon" type="image/jpg"/>
     <style>
+       body {
+        background-image: url(static/fone.jpg); /* Путь к фоновому изображению */
+        background-color: #c7b39b; /* Цвет фона */
+   }
   </style>
 </head>
-<body>
-{% block body %}
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-        <h5 class="my-0 mr-md-auto font-weight-normal">Miss Ryzh-justcakes!!!</h5>
+    <body>
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <h4 class="my-0 mr-md-auto font-weight-normal">Mis Ryzh-justcakes!!!</h4>
         <nav class="my-2 my-md-0 mr-md-3">
          <a class="p-2 text-dark" href="#">Главная</a>
             <a class="p-2 text-dark" href="#">Ассортимент</a>
@@ -20,18 +25,15 @@
         </nav>
         <a class="btn btn-outline-primary" href="#">Sign up</a>
         </div>
-    <center>
-    <h1>Sweets from Mis Ryth - выпечка с душой.<br>
-    Большой ассортимент тортов, пряников, <br>
-    капкейков и других сладостей на ваш вкус.<br>
-    </h1>
-    </center>
+        <h1><center>{% block page_title %}{% endblock %}</center></h1>
+        {% block content %}{% endblock %}
+    </body>
 <footer>
-    <p>(C) Mis Ryth 2020</p>
-    <p><a href="mailto:mis_ryzh@gmail.com">email</a></p>
-    <p><a href="https://www.instagram.com/@mis_ryzh">instagram</a></p>
-    <p><a href="https://www.vk.com/mis_ryzh">VK</a></p>
+    <ul class="icons">
+        <li><a href="https://mailto:bububushka72@gmail.com" class="icon brands fa-facebook-f"><span class="label">Email</span></a></li>
+        <li><a href="https://www.instagram.com/@mis_ryzh/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="https://vk.com/nmis_ryzh" class="icon brands fa-vk"><span class="label">Vk</span></a></li>
+    </ul>
+    <p>(C) Mis Ryzh 2020</p>
 </footer>
-{% endblock %}
-</body>
 </html>

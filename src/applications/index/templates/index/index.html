@@ -1,5 +1,30 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}Main{% endblock %}
-
-{% block body %}Justcakes{% endblock %}
+{% block page_title %}Justcakes{% endblock %}
+{% block content %}
+<center>
+    <h2>Sweets from Mis Ryth - выпечка с душой.<br>
+    Большой ассортимент тортов, пряников, <br>
+    капкейков и других сладостей на ваш вкус.<br>
+    </h2>
+    </center>
+<div class="row">
+{% for cake in cakes %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static project.image %}">
+            <div class="card-body">
+                <h5 class="card-title">{{ cake.title }}</h5>
+                <p class="card-text">{{ cake.description }}</p>
+                <a href="{% url 'project_detail' project.pk %}"
+                   class="btn btn-primary">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</body>
+{% endblock %}
