@@ -13,11 +13,11 @@
 {% for cake in cakes %}
     <div class="col-md-4">
         <div class="card mb-2">
-            <img class="card-img-top" src="{% static project.image %}">
+            <img class="card-img-top" src="{% static cake.image %}">
             <div class="card-body">
                 <h5 class="card-title">{{ cake.title }}</h5>
                 <p class="card-text">{{ cake.description }}</p>
-                <a href="{% url 'project_detail' project.pk %}"
+                <a href="{% url 'cake_detail' cake.pk %}"
                    class="btn btn-primary">
                     Read More
                 </a>
