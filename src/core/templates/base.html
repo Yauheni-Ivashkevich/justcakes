@@ -9,14 +9,16 @@
     <link href="{% static 'images/favicon.jpg' %}" rel="shortcut icon" type="image/jpg"/>
     <style>
        body {
-        background-image: url(static/fone.jpg); /* Путь к фоновому изображению */
+        background-image: url("{% static "images/fone.jpg" %}"); /* Путь к фоновому изображению */
         background-color: #c7b39b; /* Цвет фона */
-   }
+        .bg-image:hover .bg-color {background: rgba (0,0,0,.95);
+     }
   </style>
 </head>
     <body>
         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-        <h4 class="my-0 mr-md-auto font-weight-normal">Mis Ryzh-justcakes!!!</h4>
+        <link href="{% static 'images/logo2.png' %}" alt="Logo" width="80px"/>
+            <h4 class="my-0 mr-md-auto font-weight-normal">Mis Ryzh-justcakes!!!</h4>
         <nav class="my-2 my-md-0 mr-md-3">
          <a class="p-2 text-dark" href="#">Главная</a>
             <a class="p-2 text-dark" href="#">Ассортимент</a>
@@ -32,7 +34,7 @@
     <ul class="icons">
         <li><a href="https://mailto:bububushka72@gmail.com" class="icon brands fa-facebook-f"><span class="label">Email</span></a></li>
         <li><a href="https://www.instagram.com/@mis_ryzh/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="https://vk.com/nmis_ryzh" class="icon brands fa-vk"><span class="label">Vk</span></a></li>
+        <li><a href="https://vk.com/mis_ryzh" class="icon brands fa-vk"><span class="label">Vk</span></a></li>
     </ul>
     <p>(C) Mis Ryzh 2020</p>
 </footer>

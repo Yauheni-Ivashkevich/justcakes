@@ -4,7 +4,7 @@
 {% block page_title %}Justcakes{% endblock %}
 {% block content %}
 <center>
-    <h2>Sweets from Mis Ryth - выпечка с душой.<br>
+    <h2>Sweets from Mis Ryzh - выпечка с душой.<br>
     Большой ассортимент тортов, пряников, <br>
     капкейков и других сладостей на ваш вкус.<br>
     </h2>
@@ -13,7 +13,7 @@
 {% for cake in cakes %}
     <div class="col-md-4">
         <div class="card mb-2">
-            <img class="card-img-top" src="{% static cake.image %}">
+            <img class="card-img-top" src="{% static 'assets/images/fone.jpg' %}"/>
             <div class="card-body">
                 <h5 class="card-title">{{ cake.title }}</h5>
                 <p class="card-text">{{ cake.description }}</p>
