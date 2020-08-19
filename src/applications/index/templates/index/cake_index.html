@@ -3,11 +3,19 @@
 {% block title %}Main{% endblock %}
 {% block page_title %}Justcakes{% endblock %}
 {% block content %}
-<center>
+    <center>
     <h2>Sweets from Mis Ryzh - выпечка с душой.<br>
     Большой ассортимент тортов, пряников, <br>
     капкейков и других сладостей на ваш вкус.<br>
     </h2>
+    </center>
+    <center>
+        <ul>
+            <h2> {% for item in body_message %}
+            <li>{{item}}</li>
+            {% endfor %}
+            </h2>
+        </ul>
     </center>
 <div class="row">
 {% for cake in cakes %}
