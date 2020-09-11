@@ -14,12 +14,11 @@
     <div class="col-md-4">
         <div class="card mb-2" style="width: 20rem; display:inline-block; margin-right: 30px;
     margin-top: 30px; position: relative;">
-            <img class="card-img-top" src="{% static cake.image %}"/>
+            <img src="{{ cake.images.url }}" class="card-img-top" alt="">
             <div class="card-body">
                 <h5 class="card-title">{{ cake.title }}</h5>
                 <p class="card-text">{{ cake.prices }}</p>
                 <p class="card-text">{{ cake.description }}</p>
-                <p class="card-text">{{ cake.image }}</p>
                 <a> <p class="btn btn-primary">
                     Узнать больше
                 </a>
