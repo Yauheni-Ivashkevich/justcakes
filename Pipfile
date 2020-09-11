@@ -10,6 +10,7 @@ black = "==19.3b0"
 django = "*"
 dynaconf = {extras = ["yaml"],version = "*"}
 jinja2 = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.7"
