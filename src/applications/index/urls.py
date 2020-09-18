@@ -4,7 +4,8 @@ from . import views
 
 
 urlpatterns = [
-    path("", views.CakesView.as_view()),
+    path("", views.CakesView.as_view(), name="cake_index"),
+    path("<int:pk>/", views.CakeDetailView.as_view(), name="cake_detail"),
     # path("", views.CakesView.as_view, name="index"),
 ]
 

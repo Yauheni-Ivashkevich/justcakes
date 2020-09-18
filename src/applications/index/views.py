@@ -12,6 +12,14 @@ class CakesView(View):
         return render(request, 'index/cake_index.html', {"cake_index": cakes})
 
 
+class CakeDetailView(View):
+    """Полное описание десерта"""
+    def get(self, request, pk):
+        cake = Cake.objects.get(id=pk)
+        return render(request, 'index/cake_detail.html', {"cake": cake})
+
+
+
 
 #     template_name = "index/cake_index.html"
 #

@@ -4,7 +4,7 @@
 {% block page_title %}Justcakes{% endblock %}
 {% block content %}
     <center>
-    <h3>Sweets from Mis Ryzh - выпечка с душой.<br>
+    <h3>Cakes from Miss Ryzh - выпечка с душой.<br>
     Большой ассортимент тортов, пряников, <br>
     капкейков и других сладостей на ваш вкус.<br>
     </h3>
@@ -14,12 +14,13 @@
     <div class="col-md-4">
         <div class="card mb-2" style="width: 20rem; display:inline-block; margin-right: 30px;
     margin-top: 30px; position: relative;">
-            <img src="{{ cake.images.url }}" class="card-img-top" alt="">
             <div class="card-body">
+                <img class="card-img-top" src="{% static 'images' %}" alt="">
                 <h5 class="card-title">{{ cake.title }}</h5>
                 <p class="card-text">{{ cake.prices }}</p>
                 <p class="card-text">{{ cake.description }}</p>
-                <a> <p class="btn btn-primary">
+                <a href="{% url 'cake_detail' cake.pk %}"
+                   class="btn btn-primary">
                     Узнать больше
                 </a>
             </div>
