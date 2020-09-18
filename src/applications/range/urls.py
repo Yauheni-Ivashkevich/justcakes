@@ -1,3 +1,8 @@
+
+
+
+
+
 # from django.urls import path
 #
 # from applications.range.apps import RangeConfig
