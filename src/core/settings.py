@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'applications.index',
     # 'applications.range',
     # 'applications.payment',
-    # 'applications.contacts',
+    'applications.contacts',
 ]
 
 MIDDLEWARE = [
@@ -125,6 +125,6 @@ STATIC_ROOT = REPO_DIR / ".static"
 # STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # STATICFILES_DIRS = [STATIC_DIR]
 
-MEDIA_URL = '/images/'
+MEDIA_URL = '/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 

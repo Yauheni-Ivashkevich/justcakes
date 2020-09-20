@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Justcakes :: {% block title %}{% endblock %}</title>
+    <title>Justcakes :: {% block page_title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="{% static 'images/favicon.jpg' %}" rel="shortcut icon" type="image/jpg">
@@ -23,11 +23,11 @@
          <a class="p-2 text-dark" href="#">Главная</a>
             <a class="p-2 text-dark" href="#">Ассортимент</a>
             <a class="p-2 text-dark" href="#">Доставка и оплата</a>
-            <a class="p-2 text-dark" href="#">Контакты</a>
+            <a class="p-2 text-dark" href="{% url 'contacts:contacts_index' %}">Контакты</a>
         </nav>
         <a class="btn btn-outline-primary" href="#">Sign up</a>
         </div>
-        <h1><center>{% block page_title %}{% endblock %}</center></h1>
+        <h1><center>{% block block_title %}{% endblock %}</center></h1>
         {% block content %}{% endblock %}
     </body>
 <footer>

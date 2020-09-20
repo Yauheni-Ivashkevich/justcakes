@@ -5,7 +5,7 @@
 # def cake_index(request):
 #     cakes = Cake.objects.all()
 #     context = {"cakes": cakes}
-#     return render(request, "cake_index.html", context)
+#     return render(request, "contacts_index.html", context)
 #
 #
 # def cake_detail(request, pk):
