@@ -1,13 +1,14 @@
 from django.db import models as m
-
+from .storages import OverwriteStorage
 
 class Cake(m.Model):
     """Вид десерта"""
     title = m.CharField("Название", max_length=150)
     prices = m.TextField("Стоимость и заказ", null=True, blank=True)
     description = m.TextField("Описание")
-    image = m.ImageField("Изображение", upload_to="images/")
-    # url = m.SlugField(max_length=130, unique=True)
+    image = m.ImageField('Изображение', storage=OverwriteStorage(), upload_to="images/")
+    url = m.SlugField('URL', max_length=130, unique=True, null=True, blank=False)
+
 
     def __str__(self):
         return self.title

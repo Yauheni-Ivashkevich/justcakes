@@ -25,7 +25,7 @@ urlpatterns = [
     path("", include("applications.index.urls")),
     # path("range/", include("applications.range.urls")),
     # path("payment/", include("applications.payment.urls")),
-    # path("contacts/", include("applications.contacts.urls")),
+    path("contacts/", include("applications.contacts.urls")),
 ]
 
 if settings.DEBUG:

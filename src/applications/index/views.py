@@ -14,21 +14,24 @@ class CakesView(View):
 
 class CakeDetailView(View):
     """Полное описание десерта"""
-    def get(self, request, pk):
+    def get(self, request, url, pk):
         cake = Cake.objects.get(id=pk)
-        return render(request, 'index/cake_detail.html', {"cake": cake})
+
+        return render(request, 'index/cake_detail.html', {
+            'cake': cake
+        })
 
 
 
 
-#     template_name = "index/cake_index.html"
+#     template_name = "index/contacts_index.html"
 #
 
 # from django.shortcuts import render
 #
 #
 # def index(request):
-#     return render(request, 'index/cake_index.html', {
+#     return render(request, 'index/contacts_index.html', {
 #         'body_message':
 #             ['Cakes', 'Cupcakes', 'Gingers'],
 #     })
@@ -40,7 +43,7 @@ class CakeDetailView(View):
 #
 #
 # class IndexView(TemplateView):
-#     template_name = "index/cake_index.html"
+#     template_name = "index/contacts_index.html"
 #
 #     def get_context_data(self, **kwargs):
 #         parent_ctx = super().get_context_data(**kwargs)
