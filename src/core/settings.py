@@ -132,7 +132,7 @@ STATIC_URL = '/assets/'
 STATICFILES_DIRS = [
     CORE_DIR / "static",
 ]
-STATIC_ROOT = REPO_DIR / ".static"
+STATIC_ROOT = REPO_DIR / "static"
 
 # STATIC_URL = '/assets/'
 # STATIC_DIR = os.path.join(BASE_DIR, 'static')
