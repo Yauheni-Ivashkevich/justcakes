@@ -1,7 +1,9 @@
 from django.contrib import admin
 from django.contrib.admin import ModelAdmin
 
-from applications.index.models import Cake, Cake_name, Reviews
+from applications.index.models import Cake
+from applications.index.models import Cake_name
+from applications.index.models import Reviews
 
 
 @admin.register(Cake)

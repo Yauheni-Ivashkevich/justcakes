@@ -6,8 +6,8 @@ from applications.contacts.models import Contact
 
 
 class ContactsView(View):
-    """Список видов десертов"""
+    """Список контактов"""
     def get(self, request):
         contacts = Contact.objects.all()
-        return render(request, 'index/contacts_index.html', {"contacts_index": contacts})
+        return render(request, 'contacts/contacts_index.html', {"contacts_index": contacts})
 
