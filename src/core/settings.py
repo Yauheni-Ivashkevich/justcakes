@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 
+import dj_database_url
 from dynaconf import settings as _settings
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -32,20 +33,23 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # ---applications---
     'applications.index',
-    # 'applications.range',
-    # 'applications.payment',
+    # 'applications.checkout',
+    'applications.checkout',
     'applications.contacts',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', #Heroku по умолчанию не отдаёт staticfiles. Для использовать whitenoise.
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'core.urls'
 
@@ -71,18 +75,21 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
-# _db_url = _settings.DATABASE_URL
-# if _settings.ENV_FOR_DYNACONF == "heroku":
-#     _db_url = os.getenv("DATABASE_URL")
-#
-# DATABASES = {"default": dj_database_url.parse(_db_url, conn_max_age=600)}
+# Heroku: Update database configuration from $DATABASE_URL.
+_db_url = _settings.DATABASE_URL
+if _settings.ENV_FOR_DYNACONF == "heroku":
+    _db_url = os.getenv("DATABASE_URL")
+
+DATABASES = {
+    "default": dj_database_url.parse(_db_url, conn_max_age=600)
+}
 
 
 # Password validation
@@ -130,7 +137,3 @@ STATIC_ROOT = REPO_DIR / ".static"
 # STATIC_URL = '/assets/'
 # STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # STATICFILES_DIRS = [STATIC_DIR]
-
-MEDIA_URL = '/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
-

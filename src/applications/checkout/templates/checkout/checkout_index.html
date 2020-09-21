@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    {% for item in information %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <div class="card-body">
+                <h1>{{item.title}}</h1>
+                <img src="{{ item.image }}" alt="" width="150">
+                <p>{{item.description}}</p>
+
+                {% for option in item.options.all %}
+                    <h3>{{option.title}}</h3>
+                    <p>{{option.description}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

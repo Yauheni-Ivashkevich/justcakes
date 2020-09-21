@@ -6,7 +6,7 @@ class Cake(m.Model):
     title = m.CharField("Название", max_length=150)
     prices = m.TextField("Стоимость и заказ", null=True, blank=True)
     description = m.TextField("Описание")
-    image = m.ImageField('Изображение', storage=OverwriteStorage(), upload_to="images/")
+    image = m.ImageField('Изображение', storage=OverwriteStorage(), upload_to="category/")
     url = m.SlugField('URL', max_length=130, unique=True, null=True, blank=False)
 
 
@@ -22,7 +22,7 @@ class Cake_name(m.Model):
     """Подвиды десертов"""
     title = m.CharField("Название десерта", max_length=100)
     ingredients = m.TextField("Описание ингредиентов", max_length=300)
-    image = m.ImageField("Изображение", upload_to="images/")
+    image = m.ImageField("Изображение", upload_to="category/")
     cake = m.ForeignKey(Cake, verbose_name="Десерт", on_delete=m.CASCADE)
 
     def __str__(self):

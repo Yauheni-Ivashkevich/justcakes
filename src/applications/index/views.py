@@ -23,39 +23,3 @@ class CakeDetailView(View):
 
 
 
-
-#     template_name = "contacts/contacts_index.html"
-#
-
-# from django.shortcuts import render
-#
-#
-# def contacts(request):
-#     return render(request, 'contacts/contacts_index.html', {
-#         'body_message':
-#             ['Cakes', 'Cupcakes', 'Gingers'],
-#     })
-#
-#
-# from django.views.generic import TemplateView
-#
-# from applications.contacts.models import Cake
-#
-#
-# class IndexView(TemplateView):
-#     template_name = "contacts/contacts_index.html"
-#
-#     def get_context_data(self, **kwargs):
-#         parent_ctx = super().get_context_data(**kwargs)
-#
-#         info = Cake.objects.first()
-#         ctx = {
-#             "title": info.title,
-#             "description": info.description,
-#             "ingredients": info.ingredients,
-#             "image": info.image,
-#         }
-#
-#         ctx.update(parent_ctx)
-#
-#         return ctx

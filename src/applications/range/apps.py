@@ -2,4 +2,4 @@
 #
 #
 # class RangeConfig(AppConfig):
-#     name = "range"
+#     name = "checkout"

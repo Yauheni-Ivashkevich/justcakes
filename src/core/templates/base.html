@@ -20,9 +20,9 @@
         <link href="{% static 'images/logo1.jpg' %}" alt="Logo" width="80px">
             <h4 class="my-0 mr-md-auto font-weight-normal">Miss Ryzh-justcakes!!!</h4>
         <nav class="my-2 my-md-0 mr-md-3">
-         <a class="p-2 text-dark" href="#">Главная</a>
+         <a class="p-2 text-dark" href="{% url 'index:cake_index' %}">Главная</a>
             <a class="p-2 text-dark" href="#">Ассортимент</a>
-            <a class="p-2 text-dark" href="#">Доставка и оплата</a>
+            <a class="p-2 text-dark" href="{% url 'checkout:checkout' %}">Доставка и оплата</a>
             <a class="p-2 text-dark" href="{% url 'contacts:contacts_index' %}">Контакты</a>
         </nav>
         <a class="btn btn-outline-primary" href="#">Sign up</a>
