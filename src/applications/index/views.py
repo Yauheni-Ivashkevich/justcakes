@@ -24,14 +24,14 @@ class CakeDetailView(View):
 
 
 
-#     template_name = "index/contacts_index.html"
+#     template_name = "contacts/contacts_index.html"
 #
 
 # from django.shortcuts import render
 #
 #
-# def index(request):
-#     return render(request, 'index/contacts_index.html', {
+# def contacts(request):
+#     return render(request, 'contacts/contacts_index.html', {
 #         'body_message':
 #             ['Cakes', 'Cupcakes', 'Gingers'],
 #     })
@@ -39,11 +39,11 @@ class CakeDetailView(View):
 #
 # from django.views.generic import TemplateView
 #
-# from applications.index.models import Cake
+# from applications.contacts.models import Cake
 #
 #
 # class IndexView(TemplateView):
-#     template_name = "index/contacts_index.html"
+#     template_name = "contacts/contacts_index.html"
 #
 #     def get_context_data(self, **kwargs):
 #         parent_ctx = super().get_context_data(**kwargs)

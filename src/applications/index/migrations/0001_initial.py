@@ -35,8 +35,8 @@ class Migration(migrations.Migration):
                 ('email', models.EmailField(max_length=100, verbose_name='Название десерта')),
                 ('name', models.CharField(max_length=100, verbose_name='Имя')),
                 ('text', models.TextField(max_length=5000, verbose_name='Сообщение')),
-                ('cake', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='index.cake', verbose_name='Десерт')),
-                ('parent', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='index.reviews', verbose_name='Родитель')),
+                ('cake', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='contacts.cake', verbose_name='Десерт')),
+                ('parent', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='contacts.reviews', verbose_name='Родитель')),
             ],
             options={
                 'verbose_name': 'Отзыв',
@@ -50,7 +50,7 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=100, verbose_name='Название десерта')),
                 ('ingredients', models.TextField(max_length=300, verbose_name='Описание ингредиентов')),
                 ('image', models.ImageField(upload_to='images/', verbose_name='Изображение')),
-                ('cake', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='index.cake', verbose_name='Десерт')),
+                ('cake', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='contacts.cake', verbose_name='Десерт')),
             ],
             options={
                 'verbose_name': 'Подвид десерта',

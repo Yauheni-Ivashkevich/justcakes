@@ -1,9 +1,9 @@
 from django.urls import path
-from applications.contacts.apps import IndexConfig
-from . import views
+from applications.contacts.apps import ContactsConfig
+from applications.contacts.views import ContactsView
 
-app_name = IndexConfig.name
+app_name = ContactsConfig.name
 
 urlpatterns = [
-    path("contacts", views.ContactsView.as_view(), name="contacts_index"),
+    path("contacts", ContactsView.as_view(), name="contacts_index"),
 ]
