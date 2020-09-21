@@ -5,8 +5,8 @@
 
 # from django.urls import path
 #
-# from applications.range.apps import RangeConfig
-# from applications.range.views import RangeView
+# from applications.checkout.apps import RangeConfig
+# from applications.checkout.views import RangeView
 #
 # app_name = RangeConfig.name
 #

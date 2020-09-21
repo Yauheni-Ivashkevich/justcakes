@@ -11,6 +11,11 @@ django = "*"
 dynaconf = {extras = ["yaml"],version = "*"}
 jinja2 = "*"
 pillow = "*"
+gunicorn = "*"
+dj-database-url = "*"
+whitenoise = "*"
+psycopg2 = "*"
+psycopg2-binary = "*"
 
 [requires]
 python_version = "3.7"

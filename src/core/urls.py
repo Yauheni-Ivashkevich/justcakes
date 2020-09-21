@@ -23,10 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #---applications---
     path("", include("applications.index.urls")),
-    # path("range/", include("applications.range.urls")),
-    # path("payment/", include("applications.payment.urls")),
-    path("contacts/", include("applications.contacts.urls")),
-]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    # path("checkout/", include("applications.checkout.urls")),
+    path("checkout", include("applications.checkout.urls")),
+    path("contacts", include("applications.contacts.urls")),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

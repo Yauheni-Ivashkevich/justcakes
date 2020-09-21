@@ -1,5 +1,5 @@
 # from django.shortcuts import render
-# from range.models import Cake
+# from checkout.models import Cake
 #
 #
 # def cake_index(request):
@@ -15,11 +15,11 @@
 
 """from django.views.generic import ListView 
 
-from applications.range.models import Cake
+from applications.checkout.models import Cake
 
 
 class RangeView(ListView):
-    template_name = "range/cake_detail.html"
+    template_name = "checkout/cake_detail.html"
     model = Cake
 
     def get_context_data(self, **kwargs):
