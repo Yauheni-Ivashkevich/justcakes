@@ -151,4 +151,4 @@ settings.py"""
 # mode = WriteMode.overwrite
 # name = instance.file.file.name
 # dbx.client.files_upload(bytes(data, 'utf-8'), name, mode)
-"""https://istroev.me/django-dropbox-storage/""" 
+"""https://istroev.me/django-dropbox-storage/"""
