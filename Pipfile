@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 black = "==19.3b0"
+isort = "*"
 
 [packages]
 django = "*"
@@ -16,6 +17,7 @@ dj-database-url = "*"
 whitenoise = "*"
 psycopg2 = "*"
 psycopg2-binary = "*"
+
 
 [requires]
 python_version = "3.7"

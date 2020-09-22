@@ -25,4 +25,4 @@ class RangeView(ListView):
     def get_context_data(self, **kwargs):
         context = super(RangeView, self).get_context_data(**kwargs)
         context["cake_list"] = Cake.objects.all()
-        return context""" # попытка решения через ListView
+        return context"""  # попытка решения через ListView
