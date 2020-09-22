@@ -1,8 +1,3 @@
-
-
-
-
-
 # from django.urls import path
 #
 # from applications.checkout.apps import RangeConfig

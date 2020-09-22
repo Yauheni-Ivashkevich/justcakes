@@ -5,6 +5,4 @@ from applications.checkout.views import CheckoutView
 
 app_name = CheckoutConfig.name
 
-urlpatterns = [
-    path("", CheckoutView.as_view(), name="checkout"),
-]
+urlpatterns = [path("", CheckoutView.as_view(), name="checkout")]

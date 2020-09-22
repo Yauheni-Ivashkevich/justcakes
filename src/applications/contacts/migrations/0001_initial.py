@@ -7,23 +7,45 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Contact',
+            name="Contact",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(default='', max_length=150, verbose_name='Название')),
-                ('phone', models.CharField(default='', max_length=150, verbose_name='Телефон')),
-                ('email', models.CharField(default='', max_length=100, verbose_name='Почта')),
-                ('vk', models.CharField(default='', max_length=150, verbose_name='ВК')),
-                ('instagram', models.CharField(default='', max_length=150, verbose_name='Инстаграм')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "title",
+                    models.CharField(
+                        default="", max_length=150, verbose_name="Название"
+                    ),
+                ),
+                (
+                    "phone",
+                    models.CharField(
+                        default="", max_length=150, verbose_name="Телефон"
+                    ),
+                ),
+                (
+                    "email",
+                    models.CharField(default="", max_length=100, verbose_name="Почта"),
+                ),
+                ("vk", models.CharField(default="", max_length=150, verbose_name="ВК")),
+                (
+                    "instagram",
+                    models.CharField(
+                        default="", max_length=150, verbose_name="Инстаграм"
+                    ),
+                ),
             ],
-            options={
-                'verbose_name': 'Contact',
-                'verbose_name_plural': 'Contacts',
-            },
-        ),
+            options={"verbose_name": "Contact", "verbose_name_plural": "Contacts"},
+        )
     ]

@@ -4,23 +4,22 @@
 {% block block_title %}Justcakes{% endblock %}
 {% block content %}
     <center>
-    <h3>контакты</h3>
+            <h3>контакты</h3>
+            <div class="row">
+             {% for contact in contacts_index %}
+            <dl class="list-group-item contacts-block" style="margin-left: 200px;">
+                <dt>название</dt>
+                <dd>{{contact.title}}</dd>
+                <dt>почта</dt>
+                <dd><a href={{contact.email}}>Email</a></dd>
+                <dt>телефон</dt>
+                <dd>{{contact.phone}}</dd>
+                <dt>ВК</dt>
+                <dd><a href={{contact.vk}}>Vk</a></dd>
+                <dt>инстаграм</dt>
+                <dd><a href={{contact.instagram}}>Instagram</a></dd>
+            </dl>
+            {% endfor %}
+            </div>
     </center>
-<div class="row">
-    {% for contact in contacts_index %}
-        <dl class="list-group-item contacts-block" style="margin-left: 200px;">
-            <dt>название</dt>
-            <dd>{{contact.title}}</dd>
-            <dt>почта</dt>
-            <dd>{{contact.email}}</dd>
-            <dt>телефон</dt>
-            <dd>{{contact.phone}}</dd>
-            <dt>ВК</dt>
-            <dd><a href={{contact.vk}}>Vk</a></dd>
-            <dt>инстаграм</dt>
-            <dd><a href={{contact.instagram}}>Instagram</a></dd>
-        </dl>
-    {% endfor %}
-</div>
-</body>
 {% endblock %}
