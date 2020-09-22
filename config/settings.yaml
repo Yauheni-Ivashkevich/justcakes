@@ -3,12 +3,14 @@ default:
   DEBUG: true
   ALLOWED_HOSTS: []
   DATABASE_URL: ""
+  SITE_ID: 1
 
 development:
   DEBUG: true
   ALLOWED_HOSTS:
     - 127.0.0.1
     - localhost
+  SITE_ID: 1
 
 heroku:
   DEBUG: false
@@ -16,6 +18,7 @@ heroku:
     - 127.0.0.1
     - localhost
     - justcakes.herokuapp.com
+  SITE_ID: 1
 
 
 
