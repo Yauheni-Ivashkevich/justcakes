@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # ---applications---
     "applications.index",
-    # 'applications.checkout',
+    # 'applications.range',
     "applications.checkout",
     "applications.contacts",
 ]
@@ -129,3 +129,26 @@ STATIC_ROOT = REPO_DIR / ".static"
 # STATIC_URL = '/assets/'
 # STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # STATICFILES_DIRS = [STATIC_DIR]
+
+
+"""В apps добавить приложение storages и добавить переменные 
+DROPBOX_OAUTH2_TOKEN и DROPBOX_ROOT_PATH.
+settings.py"""
+# INSTALLED_APPS = (
+#     ...
+#     'storages',
+#     ...
+# )
+# DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+# DROPBOX_OAUTH2_TOKEN='your token'
+# DROPBOX_ROOT_PATH='your path'
+
+"""Обновить загруженный файл в хранилище можно следующим образом"""
+# from storages.backends.dropbox import DropboxStorage
+# from dropbox.files import WriteMode
+#
+# dbx = DropBoxStorage(settings.DROPBOX_OAUTH2_TOKEN)
+# mode = WriteMode.overwrite
+# name = instance.file.file.name
+# dbx.client.files_upload(bytes(data, 'utf-8'), name, mode)
+"""https://istroev.me/django-dropbox-storage/""" 
